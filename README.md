@@ -1,6 +1,7 @@
 # Pokémon Yellow Expansion Dev
 
 ![Screenshot](pokeyellow-expansion-dev-box-art.jpg)
+![Screenshot](pokeyellow-expansion-dev-0.png)
 
 This is a Quality of Life expansion of Pokemon Yellow to enhance the
 vanilla experience.
