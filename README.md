@@ -1,12 +1,11 @@
-# Pokémon Yellow [![Build Status][ci-badge]][ci]
+# Pokémon Yellow Expansion Dev
 
-This is a disassembly of Pokémon Yellow.
+![Screenshot](pokeyellow-expansion-dev-box-art.jpg)
 
-It builds the following ROMs:
+This is a Quality of Life expansion of Pokemon Yellow to enhance the
+vanilla experience.
 
-- Pokemon Yellow (UE) [C][!].gbc  `sha1: cc7d03262ebfaf2f06772c1a480c7d9d5f4a38e1`
-- YELLMONS.GB (debug build) `sha1: d44e96eddfbdad633cbe4e6e64915e9e198974b0`
-- Dmgapse0.h08.patch `sha1: f3346a5559d52c296b8feab0cdbbfb0e250ac161`
+Based on the Pokeyellow disassembly by [**Pret**](https://github.com/pret/pokeyellow)
 
 To set up the repository, see [**INSTALL.md**](INSTALL.md).
 
