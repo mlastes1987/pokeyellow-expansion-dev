@@ -10,7 +10,7 @@ Based on the pokeyellow disassembly by [**Pret**](https://github.com/pret/pokeye
 
 ![Screenshot](pokeyellow-expansion-dev-0.png)
 
-- **Bank Expansion** Bank's 1 and 1F have been expanded to make room for more stuff.
+- **Bank Expansion** Bank's 1 and 1F and ROMX have been expanded and edited to make room for more stuff.
 
 - **Pikachu learns Surf by HM** This also allows you to participate in the Pikachu Surf minigame.
 
