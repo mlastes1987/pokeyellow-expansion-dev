@@ -16,7 +16,7 @@ Based on the pokeyellow disassembly by [**Pret**](https://github.com/pret/pokeye
 
 - **Trade Evolutions** All trade evolutions evolve at level 37.
 
-- **Move Typeset Changes** Fly has been changed to Flying type and Karate Chop is changed to Fighting.
+- **Move Typeset Changes** Gust has been changed to Flying type and Karate Chop is changed to Fighting.
 
 - **Crobat Gen 2 Backport** Crobat has been backported from Pokemon Crystal, sprites and all, evolved from Golbat at level 32, and is able to learn Fly by HM.
 
