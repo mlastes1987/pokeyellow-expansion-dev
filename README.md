@@ -24,7 +24,7 @@ Based on the pokeyellow disassembly by [**Pret**](https://github.com/pret/pokeye
 ![Screenshot](pokeyellow-expansion-dev-2.png)
 ![Screenshot](pokeyellow-expansion-dev-3.png)
 
-- **Known Issues** The back sprite for Crobat is a little rough due to it being shrunk to 32x32 pixels from the Crystal 56x56 so it could fit in the Battle UI.  I'll see what I can do about finding a replacement but it'll do for now.
+- **Known Issues** The back sprite for Crobat has been fixed thanks to [**TrainerSquidgy**](https://github.com/TrainerSquidgy)
 
 # Credit/Thanks
 
