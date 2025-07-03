@@ -226,7 +226,7 @@ SetPal_TrainerCard:
 	srl a
 	push af
 	jr c, .haveBadge
-; The player doens't have the badge, so zero the badge's blk data.
+; The player doesn't have the badge, so zero the badge's blk data.
 	push bc
 	ld a, [de]
 	ld c, a
@@ -723,7 +723,7 @@ SendSGBPackets:
 	pop hl
 	call InitCGBPalettes
 	ldh a, [rLCDC]
-	and 1 << rLCDC_ENABLE
+	and LCDC_ON
 	ret z
 	call Delay3
 	ret
@@ -817,7 +817,7 @@ DMGPalToCGBPal::
 	ldh a, [rOBP1]
 	ld [wLastOBP1], a
 .convert
-	FOR color_index, NUM_PAL_COLORS
+	FOR color_index, PAL_COLORS
 		ld b, a
 		and %11
 		call .GetColorAddress
@@ -826,7 +826,7 @@ DMGPalToCGBPal::
 		ld a, [hl]
 		ld [wCGBPal + color_index * 2 + 1], a
 
-		IF color_index < NUM_PAL_COLORS - 1
+		IF color_index < PAL_COLORS - 1
 			ld a, b
 			rrca
 			rrca
@@ -853,14 +853,14 @@ TransferCurBGPData::
 	ld hl, wCGBPal
 	ld b, %10 ; mask for non-V-blank/non-H-blank STAT mode
 	ldh a, [rLCDC]
-	and 1 << rLCDC_ENABLE
+	and LCDC_ON
 	jr nz, .lcdEnabled
-	REPT NUM_PAL_COLORS
+	REPT PAL_COLORS
 		call TransferPalColorLCDDisabled
 	ENDR
 	jr .done
 .lcdEnabled
-	REPT NUM_PAL_COLORS
+	REPT PAL_COLORS
 		call TransferPalColorLCDEnabled
 	ENDR
 .done
@@ -879,7 +879,7 @@ BufferBGPPal::
 	ld de, wBGPPalsBuffer
 	add hl, de
 	ld de, wCGBPal
-	ld c, PALETTE_SIZE
+	ld c, PAL_SIZE
 .loop
 	ld a, [de]
 	ld [hli], a
@@ -892,7 +892,7 @@ BufferBGPPal::
 TransferBGPPals::
 ; Transfer the buffered BG palettes.
 	ldh a, [rLCDC]
-	and 1 << rLCDC_ENABLE
+	and LCDC_ON
 	jr z, .lcdDisabled
 	di
 .waitLoop
@@ -910,7 +910,7 @@ TransferBGPPals::
 	ldh [rBGPI], a
 	ld de, rBGPD
 	ld hl, wBGPPalsBuffer
-	ld c, 4 * PALETTE_SIZE
+	ld c, 4 * PAL_SIZE
 .loop
 	ld a, [hli]
 	ld [de], a
@@ -929,14 +929,14 @@ TransferCurOBPData:
 	ld hl, wCGBPal
 	ld b, %10 ; mask for non-V-blank/non-H-blank STAT mode
 	ldh a, [rLCDC]
-	and 1 << rLCDC_ENABLE
+	and LCDC_ON
 	jr nz, .lcdEnabled
-	REPT NUM_PAL_COLORS
+	REPT PAL_COLORS
 		call TransferPalColorLCDDisabled
 	ENDR
 	jr .done
 .lcdEnabled
-	REPT NUM_PAL_COLORS
+	REPT PAL_COLORS
 		call TransferPalColorLCDEnabled
 	ENDR
 .done
